@@ -1,0 +1,16 @@
+<% title "Leaf Spot Imm" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @leaf_spot_imm.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @leaf_spot_imm.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_leaf_spot_imm_path(@leaf_spot_imm) %> |
+  <%= link_to "Destroy", @leaf_spot_imm, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", leaf_spot_imms_path %>
+</p>

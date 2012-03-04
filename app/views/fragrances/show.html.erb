@@ -1,0 +1,16 @@
+<% title "Fragrance" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fragrance.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @fragrance.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_fragrance_path(@fragrance) %> |
+  <%= link_to "Destroy", @fragrance, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", fragrances_path %>
+</p>

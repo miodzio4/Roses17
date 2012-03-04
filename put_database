@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+use strict;
+use warnings; 
+my $count=12200;
+while (<>)
+ {
+ s/\n//;
+ my @res= split (",");
+ print $count++,"|";
+ foreach( @res ) { print $_, "|"; }
+ print "2012-03-03 21:08:41.691260|2012-03-03 21:08:41.691260\n";
+ }  
+  

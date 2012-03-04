@@ -1,0 +1,84 @@
+<% title "Rose" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rose.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @rose.description %>
+</p>
+<p>
+  <strong>Flower Color:</strong>
+  <%= @rose.flower_color_id %>
+</p>
+<p>
+  <strong>Flower Color Desc:</strong>
+  <%= @rose.flower_color_desc %>
+</p>
+<p>
+  <strong>Synonims:</strong>
+  <%= @rose.synonims %>
+</p>
+<p>
+  <strong>Milddew Imm:</strong>
+  <%= @rose.milddew_imm_id %>
+</p>
+<p>
+  <strong>Leaves Color:</strong>
+  <%= @rose.leaves_color %>
+</p>
+<p>
+  <strong>Leaf Spot Imm:</strong>
+  <%= @rose.leaf_spot_imm_id %>
+</p>
+<p>
+  <strong>Fragrance:</strong>
+  <%= @rose.fragrance_id %>
+</p>
+<p>
+  <strong>Height:</strong>
+  <%= @rose.height_id %>
+</p>
+<p>
+  <strong>Height Text:</strong>
+  <%= @rose.height_text %>
+</p>
+<p>
+  <strong>Freeze Imm:</strong>
+  <%= @rose.freeze_imm_id %>
+</p>
+<p>
+  <strong>Type:</strong>
+  <%= @rose.type_id %>
+</p>
+<p>
+  <strong>Year:</strong>
+  <%= @rose.year %>
+</p>
+<p>
+  <strong>Origin:</strong>
+  <%= @rose.origin %>
+</p>
+<p>
+  <strong>Adr:</strong>
+  <%= @rose.ADR %>
+</p>
+<p>
+  <strong>Flower Shape:</strong>
+  <%= @rose.flower_shape %>
+</p>
+<p>
+  <strong>Cultivation:</strong>
+  <%= @rose.cultivation %>
+</p>
+<p>
+  <strong>Remarks:</strong>
+  <%= @rose.remarks %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_rose_path(@rose) %> |
+  <%= link_to "Destroy", @rose, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", roses_path %>
+</p>

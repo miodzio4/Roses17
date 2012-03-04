@@ -1,0 +1,19 @@
+<% title "Heights" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for height in @heights %>
+    <tr>
+      <td><%= height.name %></td>
+      <td><%= height.description %></td>
+      <td><%= link_to "Show", height %></td>
+      <td><%= link_to "Edit", edit_height_path(height) %></td>
+      <td><%= link_to "Destroy", height, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Height", new_height_path %></p>

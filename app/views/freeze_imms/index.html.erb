@@ -1,0 +1,19 @@
+<% title "Freeze Imms" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for freeze_imm in @freeze_imms %>
+    <tr>
+      <td><%= freeze_imm.name %></td>
+      <td><%= freeze_imm.description %></td>
+      <td><%= link_to "Show", freeze_imm %></td>
+      <td><%= link_to "Edit", edit_freeze_imm_path(freeze_imm) %></td>
+      <td><%= link_to "Destroy", freeze_imm, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Freeze Imm", new_freeze_imm_path %></p>

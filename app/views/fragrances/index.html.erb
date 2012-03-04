@@ -1,0 +1,19 @@
+<% title "Fragrances" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for fragrance in @fragrances %>
+    <tr>
+      <td><%= fragrance.name %></td>
+      <td><%= fragrance.description %></td>
+      <td><%= link_to "Show", fragrance %></td>
+      <td><%= link_to "Edit", edit_fragrance_path(fragrance) %></td>
+      <td><%= link_to "Destroy", fragrance, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Fragrance", new_fragrance_path %></p>

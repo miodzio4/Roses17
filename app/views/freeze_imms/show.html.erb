@@ -1,0 +1,16 @@
+<% title "Freeze Imm" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @freeze_imm.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @freeze_imm.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_freeze_imm_path(@freeze_imm) %> |
+  <%= link_to "Destroy", @freeze_imm, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", freeze_imms_path %>
+</p>

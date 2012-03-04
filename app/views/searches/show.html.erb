@@ -1,0 +1,44 @@
+<% title "Search" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @search.name %>
+</p>
+<p>
+  <strong>Flower Color:</strong>
+  <%= @search.flower_color_id %>
+</p>
+<p>
+  <strong>Milddew Imm:</strong>
+  <%= @search.milddew_imm_id %>
+</p>
+<p>
+  <strong>Leaf Spot Imm:</strong>
+  <%= @search.leaf_spot_imm_id %>
+</p>
+<p>
+  <strong>Fragrance:</strong>
+  <%= @search.fragrance_id %>
+</p>
+<p>
+  <strong>Height:</strong>
+  <%= @search.height_id %>
+</p>
+<p>
+  <strong>Freeze Imm:</strong>
+  <%= @search.freeze_imm_id %>
+</p>
+<p>
+  <strong>Type:</strong>
+  <%= @search.type_id %>
+</p>
+<p>
+  <strong>Adr:</strong>
+  <%= @search.ADR %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_search_path(@search) %> |
+  <%= link_to "Destroy", @search, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", searches_path %>
+</p>

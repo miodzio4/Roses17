@@ -1,0 +1,16 @@
+<% title "Milddew Imm" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @milddew_imm.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @milddew_imm.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_milddew_imm_path(@milddew_imm) %> |
+  <%= link_to "Destroy", @milddew_imm, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", milddew_imms_path %>
+</p>

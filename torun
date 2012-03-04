@@ -1,0 +1,35 @@
+#!/bin/sh
+# This command will automatically be run when you run "rails" with Rails 3 gems installed from the root of your application.
+#use bash ../template/torun 
+cp -i ~/projects/template/Gemfile .
+bundle install
+rails generate formtastic:install 
+
+rails g nifty:layout
+
+rails generate nifty:scaffold Rose name:string description:string flower_color_id:integer flower_color_desc:string synonims:string milddew_imm_id:integer leaves_color:string leaf_spot_imm_id:integer fragrance_id:integer height_id:integer height_text:string freeze_imm_id:integer type_id:integer year:string origin:string ADR:boolean flower_shape:string cultivation:string remarks:string
+
+rails generate nifty:scaffold flower_color name:string description:string
+rails generate nifty:scaffold milddew_imm name:string description:string
+rails generate nifty:scaffold leaf_spot_imm name:string description:string
+rails generate nifty:scaffold fragrance name:string description:string
+rails generate nifty:scaffold height name:string description:string
+rails generate nifty:scaffold freeze_imm name:string description:string
+rails generate nifty:scaffold type name:string description:string
+
+rails generate nifty:scaffold Search name:string flower_color_id:integer milddew_imm_id:integer leaf_spot_imm_id:integer fragrance_id:integer height_id:integer freeze_imm_id:integer type_id:integer ADR:boolean
+
+
+rails generate nifty:scaffold flower_color_search search_id:integer flower_color_id:integer --skip-controller
+rails generate nifty:scaffold milddew_imm_search search_id:integer milddew_imm_id:integer --skip-controller
+rails generate nifty:scaffold leaf_spot_imm_search search_id:integer leaf_spot_imm_id:integer --skip-controller
+rails generate nifty:scaffold freeze_imm_search search_id:integer freeze_imm_id:integer --skip-controller
+rails generate nifty:scaffold type_search search_id:integer type_id:integer --skip-controller
+rails generate nifty:scaffold fragrance_search search_id:integer fragrance_id:integer --skip-controller
+rails generate nifty:scaffold height_search search_id:integer height_id:integer --skip-controller
+
+bundle exec rake db:migrate
+
+
+cp -i -r ~/projects/template/* .
+rails server

@@ -1,0 +1,53 @@
+<% title "Roses" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Flower Color</th>
+    <th>Flower Color Desc</th>
+    <th>Synonims</th>
+    <th>Milddew Imm</th>
+    <th>Leaves Color</th>
+    <th>Leaf Spot Imm</th>
+    <th>Fragrance</th>
+    <th>Height</th>
+    <th>Height Text</th>
+    <th>Freeze Imm</th>
+    <th>Type</th>
+    <th>Year</th>
+    <th>Origin</th>
+    <th>Adr</th>
+    <th>Flower Shape</th>
+    <th>Cultivation</th>
+    <th>Remarks</th>
+  </tr>
+  <% for rose in @roses %>
+    <tr>
+      <td><%= rose.name %></td>
+      <td><%= rose.description %></td>
+      <td><%= rose.flower_color_id %></td>
+      <td><%= rose.flower_color_desc %></td>
+      <td><%= rose.synonims %></td>
+      <td><%= rose.milddew_imm_id %></td>
+      <td><%= rose.leaves_color %></td>
+      <td><%= rose.leaf_spot_imm_id %></td>
+      <td><%= rose.fragrance_id %></td>
+      <td><%= rose.height_id %></td>
+      <td><%= rose.height_text %></td>
+      <td><%= rose.freeze_imm_id %></td>
+      <td><%= rose.type_id %></td>
+      <td><%= rose.year %></td>
+      <td><%= rose.origin %></td>
+      <td><%= rose.ADR %></td>
+      <td><%= rose.flower_shape %></td>
+      <td><%= rose.cultivation %></td>
+      <td><%= rose.remarks %></td>
+      <td><%= link_to "Show", rose %></td>
+      <td><%= link_to "Edit", edit_rose_path(rose) %></td>
+      <td><%= link_to "Destroy", rose, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Rose", new_rose_path %></p>

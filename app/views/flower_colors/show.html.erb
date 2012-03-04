@@ -1,0 +1,16 @@
+<% title "Flower Color" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @flower_color.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @flower_color.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_flower_color_path(@flower_color) %> |
+  <%= link_to "Destroy", @flower_color, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", flower_colors_path %>
+</p>

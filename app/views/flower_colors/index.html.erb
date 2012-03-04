@@ -1,0 +1,19 @@
+<% title "Flower Colors" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for flower_color in @flower_colors %>
+    <tr>
+      <td><%= flower_color.name %></td>
+      <td><%= flower_color.description %></td>
+      <td><%= link_to "Show", flower_color %></td>
+      <td><%= link_to "Edit", edit_flower_color_path(flower_color) %></td>
+      <td><%= link_to "Destroy", flower_color, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Flower Color", new_flower_color_path %></p>

@@ -1,0 +1,19 @@
+<% title "Leaf Spot Imms" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for leaf_spot_imm in @leaf_spot_imms %>
+    <tr>
+      <td><%= leaf_spot_imm.name %></td>
+      <td><%= leaf_spot_imm.description %></td>
+      <td><%= link_to "Show", leaf_spot_imm %></td>
+      <td><%= link_to "Edit", edit_leaf_spot_imm_path(leaf_spot_imm) %></td>
+      <td><%= link_to "Destroy", leaf_spot_imm, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Leaf Spot Imm", new_leaf_spot_imm_path %></p>

@@ -1,0 +1,41 @@
+one:
+  name: MyString
+  description: MyString
+  flower_color_id: 1
+  flower_color_desc: MyString
+  synonims: MyString
+  milddew_imm_id: 1
+  leaves_color: MyString
+  leaf_spot_imm_id: 1
+  fragrance_id: 1
+  height_id: 1
+  height_text: MyString
+  freeze_imm_id: 1
+  type_id: 1
+  year: MyString
+  origin: MyString
+  ADR: false
+  flower_shape: MyString
+  cultivation: MyString
+  remarks: MyString
+
+two:
+  name: MyString
+  description: MyString
+  flower_color_id: 1
+  flower_color_desc: MyString
+  synonims: MyString
+  milddew_imm_id: 1
+  leaves_color: MyString
+  leaf_spot_imm_id: 1
+  fragrance_id: 1
+  height_id: 1
+  height_text: MyString
+  freeze_imm_id: 1
+  type_id: 1
+  year: MyString
+  origin: MyString
+  ADR: false
+  flower_shape: MyString
+  cultivation: MyString
+  remarks: MyString

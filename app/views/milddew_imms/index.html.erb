@@ -1,0 +1,19 @@
+<% title "Milddew Imms" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for milddew_imm in @milddew_imms %>
+    <tr>
+      <td><%= milddew_imm.name %></td>
+      <td><%= milddew_imm.description %></td>
+      <td><%= link_to "Show", milddew_imm %></td>
+      <td><%= link_to "Edit", edit_milddew_imm_path(milddew_imm) %></td>
+      <td><%= link_to "Destroy", milddew_imm, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Milddew Imm", new_milddew_imm_path %></p>

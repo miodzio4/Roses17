@@ -1,0 +1,16 @@
+<% title "Height" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @height.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @height.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_height_path(@height) %> |
+  <%= link_to "Destroy", @height, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", heights_path %>
+</p>
