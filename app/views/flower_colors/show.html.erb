@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @flower_color.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @flower_color.description %>
+</p>
+
+<%= link_to 'Edit', edit_flower_color_path(@flower_color) %> |
+<%= link_to 'Back', flower_colors_path %>

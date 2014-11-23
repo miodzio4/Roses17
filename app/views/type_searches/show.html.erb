@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Search:</strong>
+  <%= @type_search.search_id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @type_search.type_id %>
+</p>
+
+<%= link_to 'Edit', edit_type_search_path(@type_search) %> |
+<%= link_to 'Back', type_searches_path %>

@@ -1,0 +1,27 @@
+<h1>Listing heights</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @heights.each do |height| %>
+      <tr>
+        <td><%= height.name %></td>
+        <td><%= height.description %></td>
+        <td><%= link_to 'Show', height %></td>
+        <td><%= link_to 'Edit', edit_height_path(height) %></td>
+        <td><%= link_to 'Destroy', height, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Height', new_height_path %>

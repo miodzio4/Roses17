@@ -1,0 +1,2 @@
+module FreezeImmsHelper
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @freeze_imm.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @freeze_imm.description %>
+</p>
+
+<%= link_to 'Edit', edit_freeze_imm_path(@freeze_imm) %> |
+<%= link_to 'Back', freeze_imms_path %>

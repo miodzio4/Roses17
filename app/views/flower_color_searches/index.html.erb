@@ -1,0 +1,27 @@
+<h1>Listing flower_color_searches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Search</th>
+      <th>Flower color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flower_color_searches.each do |flower_color_search| %>
+      <tr>
+        <td><%= flower_color_search.search_id %></td>
+        <td><%= flower_color_search.flower_color_id %></td>
+        <td><%= link_to 'Show', flower_color_search %></td>
+        <td><%= link_to 'Edit', edit_flower_color_search_path(flower_color_search) %></td>
+        <td><%= link_to 'Destroy', flower_color_search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flower color search', new_flower_color_search_path %>

@@ -1,0 +1,27 @@
+<h1>Listing leaf_spot_imms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leaf_spot_imms.each do |leaf_spot_imm| %>
+      <tr>
+        <td><%= leaf_spot_imm.name %></td>
+        <td><%= leaf_spot_imm.description %></td>
+        <td><%= link_to 'Show', leaf_spot_imm %></td>
+        <td><%= link_to 'Edit', edit_leaf_spot_imm_path(leaf_spot_imm) %></td>
+        <td><%= link_to 'Destroy', leaf_spot_imm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Leaf spot imm', new_leaf_spot_imm_path %>

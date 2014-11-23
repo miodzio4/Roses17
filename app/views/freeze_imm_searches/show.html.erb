@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Search:</strong>
+  <%= @freeze_imm_search.search_id %>
+</p>
+
+<p>
+  <strong>Freeze imm:</strong>
+  <%= @freeze_imm_search.freeze_imm_id %>
+</p>
+
+<%= link_to 'Edit', edit_freeze_imm_search_path(@freeze_imm_search) %> |
+<%= link_to 'Back', freeze_imm_searches_path %>

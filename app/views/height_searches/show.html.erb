@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Search:</strong>
+  <%= @height_search.search_id %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @height_search.height_id %>
+</p>
+
+<%= link_to 'Edit', edit_height_search_path(@height_search) %> |
+<%= link_to 'Back', height_searches_path %>

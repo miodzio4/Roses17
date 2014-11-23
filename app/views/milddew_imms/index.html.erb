@@ -1,0 +1,27 @@
+<h1>Listing milddew_imms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @milddew_imms.each do |milddew_imm| %>
+      <tr>
+        <td><%= milddew_imm.name %></td>
+        <td><%= milddew_imm.description %></td>
+        <td><%= link_to 'Show', milddew_imm %></td>
+        <td><%= link_to 'Edit', edit_milddew_imm_path(milddew_imm) %></td>
+        <td><%= link_to 'Destroy', milddew_imm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Milddew imm', new_milddew_imm_path %>

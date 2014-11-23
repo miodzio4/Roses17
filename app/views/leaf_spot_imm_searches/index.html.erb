@@ -1,0 +1,27 @@
+<h1>Listing leaf_spot_imm_searches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Search</th>
+      <th>Leaf spot imm</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @leaf_spot_imm_searches.each do |leaf_spot_imm_search| %>
+      <tr>
+        <td><%= leaf_spot_imm_search.search_id %></td>
+        <td><%= leaf_spot_imm_search.leaf_spot_imm_id %></td>
+        <td><%= link_to 'Show', leaf_spot_imm_search %></td>
+        <td><%= link_to 'Edit', edit_leaf_spot_imm_search_path(leaf_spot_imm_search) %></td>
+        <td><%= link_to 'Destroy', leaf_spot_imm_search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Leaf spot imm search', new_leaf_spot_imm_search_path %>

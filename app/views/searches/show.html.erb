@@ -1,0 +1,8 @@
+<h1>Searches</h1>
+<%= render :partial => @search.roses  , :as => :item %>
+
+<p>
+  <%= link_to "Edit", edit_search_path(@search) %> |
+  <%= link_to "Destroy", @search, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", searches_path %>
+</p>

@@ -1,0 +1,17 @@
+<%= semantic_form_for @search do |f| %>
+  <%= f.inputs do %>
+  <%= f.input :name %>
+  <%= f.input :flower_colors, :required => false %>
+  <%= f.input :milddew_imms %>
+  <%= f.input :leaf_spot_imms %>
+
+  <%= f.input :fragrances %>
+  <%= f.input :heights %>
+
+  <%= f.input :freeze_imms %>
+  <%= f.input :types %>
+  <%= f.input :ADR %>
+  <% end %>
+  <%= f.buttons %>
+<% end %>
+

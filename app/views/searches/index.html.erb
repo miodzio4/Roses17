@@ -1,0 +1,40 @@
+<h1>Listing searches</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Flower Color</th>
+    <th>Milddew Imm</th>
+    <th>Leaf Spot Imm</th>
+    <th>Fragrance</th>
+    <th>Height</th>
+    <th>Freeze Imm</th>
+    <th>Type</th>
+    <th>Adr</th>
+  </tr>
+  <% for search in @searches %>
+    <tr>
+      <td><%= search.name %></td>    
+      <td>
+        <% for idd in search.flower_color_ids %>
+          <% for color in @flowercolors %>  
+            <% if color.id==idd %>
+		<p><%= color.name %></p>
+             <% end %>    
+           <% end %>
+        <% end %>
+      </td>
+      <td><%= search.leaf_spot_imm_ids %></td>
+      <td><%= search.fragrance_ids %></td>
+      <td><%= search.height_ids %></td>
+      <td><%= search.freeze_imm_ids %></td>
+      <td><%= search.type_ids %></td>
+      <td><%= search.ADR %></td>
+      <td><%= link_to "Show", search %></td>
+      <td><%= link_to "Edit", edit_search_path(search) %></td>
+      <td><%= link_to "Destroy", search, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Search", new_search_path %></p>

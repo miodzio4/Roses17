@@ -1,0 +1,10 @@
+<%= semantic_form_for @height_search do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :search_id %>
+    <%= f.input :height_id %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

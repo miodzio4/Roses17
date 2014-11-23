@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @height.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @height.description %>
+</p>
+
+<%= link_to 'Edit', edit_height_path(@height) %> |
+<%= link_to 'Back', heights_path %>

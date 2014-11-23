@@ -1,0 +1,27 @@
+<h1>Listing flower_colors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flower_colors.each do |flower_color| %>
+      <tr>
+        <td><%= flower_color.name %></td>
+        <td><%= flower_color.description %></td>
+        <td><%= link_to 'Show', flower_color %></td>
+        <td><%= link_to 'Edit', edit_flower_color_path(flower_color) %></td>
+        <td><%= link_to 'Destroy', flower_color, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flower color', new_flower_color_path %>

@@ -1,0 +1,2 @@
+module TypeSearchesHelper
+end

@@ -1,0 +1,27 @@
+<h1>Listing freeze_imm_searches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Search</th>
+      <th>Freeze imm</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @freeze_imm_searches.each do |freeze_imm_search| %>
+      <tr>
+        <td><%= freeze_imm_search.search_id %></td>
+        <td><%= freeze_imm_search.freeze_imm_id %></td>
+        <td><%= link_to 'Show', freeze_imm_search %></td>
+        <td><%= link_to 'Edit', edit_freeze_imm_search_path(freeze_imm_search) %></td>
+        <td><%= link_to 'Destroy', freeze_imm_search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Freeze imm search', new_freeze_imm_search_path %>

@@ -1,0 +1,27 @@
+<h1>Listing fragrances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fragrances.each do |fragrance| %>
+      <tr>
+        <td><%= fragrance.name %></td>
+        <td><%= fragrance.description %></td>
+        <td><%= link_to 'Show', fragrance %></td>
+        <td><%= link_to 'Edit', edit_fragrance_path(fragrance) %></td>
+        <td><%= link_to 'Destroy', fragrance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fragrance', new_fragrance_path %>

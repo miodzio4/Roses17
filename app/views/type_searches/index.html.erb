@@ -1,0 +1,27 @@
+<h1>Listing type_searches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Search</th>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @type_searches.each do |type_search| %>
+      <tr>
+        <td><%= type_search.search_id %></td>
+        <td><%= type_search.type_id %></td>
+        <td><%= link_to 'Show', type_search %></td>
+        <td><%= link_to 'Edit', edit_type_search_path(type_search) %></td>
+        <td><%= link_to 'Destroy', type_search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Type search', new_type_search_path %>
