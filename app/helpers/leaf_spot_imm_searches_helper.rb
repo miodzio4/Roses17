@@ -1,2 +1,0 @@
-module LeafSpotImmSearchesHelper
-end

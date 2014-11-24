@@ -1,2 +1,0 @@
-module FragranceSearchesHelper
-end
